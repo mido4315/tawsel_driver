@@ -17,6 +17,7 @@ class HomeView extends StatelessWidget {
         child: ListView(
           children: const [
             CustomAppBarForHomeScreen(),
+
           ],
         ),
       ),

@@ -20,6 +20,7 @@ abstract class AppRouter {
   static const kNewPasswordPage = '/NewPasswordPage';
   static const kChangeCurrentPasswordPage = '/ChangeCurrentPasswordPage';
 
+
   static final router = GoRouter(
     routes: [
       GoRoute(

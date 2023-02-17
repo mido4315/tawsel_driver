@@ -70,7 +70,7 @@ class sucssessheetcontainer extends StatelessWidget {
                     style: TextStyle(fontSize: 15, color: Color(0xFF262626)),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 18,
                   ),
                   Elvetedbottomsheet(
                     text: 'حسناً ، فهمت',
