@@ -21,15 +21,15 @@ class _HomeViewState extends State<HomeView> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color(0xffF1F4F3),
+      backgroundColor: const Color(0xffF1F4F3),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             // color: Colors.purpleAccent,
             child: Column(
               children: [
-                CustomAppBarForHomeScreen(),
-                SizedBox(
+                const CustomAppBarForHomeScreen(),
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
@@ -40,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black12.withOpacity(0.1),
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                         spreadRadius: 1,
                         blurRadius: 1,
                         //blurStyle: BlurStyle.normal
@@ -53,7 +53,7 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       FlutterSwitch(
-                        activeColor: Color(0xffFF6600),
+                        activeColor: const Color(0xffFF6600),
                         height: 30,
                         width: 50,
                         value: isSwitchOn,
@@ -69,7 +69,7 @@ class _HomeViewState extends State<HomeView> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(
+                          const Text(
                             'حالة العمل ',
                             style: TextStyle(
                                 fontSize: 16,
@@ -78,7 +78,7 @@ class _HomeViewState extends State<HomeView> {
                                 fontWeight: FontWeight.bold),
                           ),
                           isSwitchOn
-                              ? Text(
+                              ? const Text(
                                   'متصل الان',
                                   style: TextStyle(
                                       fontSize: 15,
@@ -86,7 +86,7 @@ class _HomeViewState extends State<HomeView> {
                                       fontWeight: FontWeight.bold,
                                       fontFamily: ('Cairo')),
                                 )
-                              : Text(
+                              : const Text(
                                   'غير متوفر',
                                   style: TextStyle(
                                       fontSize: 17,
@@ -99,11 +99,11 @@ class _HomeViewState extends State<HomeView> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                   height: height * 0.1,
                   width: width * 0.95,
                   decoration: BoxDecoration(
@@ -111,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black12.withOpacity(0.1),
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                         spreadRadius: 1,
                         blurRadius: 1,
                         //blurStyle: BlurStyle.normal
@@ -123,7 +123,7 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         ' المكان الحالي ',
                         style: TextStyle(
                             fontSize: 16,
@@ -131,12 +131,12 @@ class _HomeViewState extends State<HomeView> {
                             fontWeight: FontWeight.bold,
                             fontFamily: ('Cairo')),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Wrap(
                         direction: Axis.horizontal,
-                        children: [
+                        children: const [
                           Text(
                             ' شارع 10 - باب الشعرية - القاهرة',
                             style: TextStyle(
@@ -154,25 +154,25 @@ class _HomeViewState extends State<HomeView> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
                   padding:
-                      EdgeInsets.only(left: 10, bottom: 0, right: 10, top: 10),
+                      const EdgeInsets.only(left: 10, bottom: 0, right: 10, top: 10),
                   width: width,
                   height: 600,
                   // color: Colors.purple,
                   decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
-                      borderRadius: BorderRadius.only(
+                      color: const Color(0xffFFFFFF),
+                      borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(15),
                         topLeft: Radius.circular(15),
                       ),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black12.withOpacity(0.1),
-                          offset: Offset(0, 3),
+                          offset: const Offset(0, 3),
                           spreadRadius: 1,
                           blurRadius: 1,
                           //blurStyle: BlurStyle.normal
@@ -180,41 +180,43 @@ class _HomeViewState extends State<HomeView> {
                       ]),
                   child: Column(
                     children: [
-                      Align(
+                      const Align(
                         alignment: Alignment.centerRight,
                         child: Text(
                           'الطلبات الحالية',
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Container(
                         height: height * 0.35,
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12.withOpacity(0.1),
-                                offset: Offset(1,3),
-                                spreadRadius: 3,
-                                blurRadius: 2,
-                                //blurStyle: BlurStyle.normal
-                              )
-                            ],
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12.withOpacity(0.1),
+                              offset: const Offset(1, 3),
+                              spreadRadius: 3,
+                              blurRadius: 2,
+                              //blurStyle: BlurStyle.normal
+                            )
+                          ],
                         ),
                         child: Column(
                           children: [
                             ListTile(
                               leading: TextButton(
                                 onPressed: () {},
-                                child: Text(
+                                child: const Text(
                                   'كاش ',
                                   style: TextStyle(
-                                      fontSize: 15, color: Color(0xffFF6600)),
+                                    fontSize: 15,
+                                    color: Color(0xffFF6600),
+                                  ),
                                 ),
                               ),
                               title: const Text(
@@ -230,7 +232,7 @@ class _HomeViewState extends State<HomeView> {
                                 children: const [
                                   Text(
                                     "شارع10 - باب الشعرية - القاهرة",
-                                    style: TextStyle(fontSize: 12),
+                                    style: TextStyle(fontSize: 11),
                                     textAlign: TextAlign.right,
                                   ),
                                   Icon(Icons.location_on),
@@ -246,29 +248,29 @@ class _HomeViewState extends State<HomeView> {
                             ElevatedButton(
                               onPressed: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                     content: Text('open Order Detail Page'),
                                     duration: Duration(seconds: 1),
                                   ),
                                 );
                               },
-                              child: Center(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.white,
+                                side: const BorderSide(
+                                  color: Color(0xffFF6600),
+                                ),
+                              ),
+                              child: const Center(
                                 child: Text(
                                   'عرض التفاصيل الطلب ',
                                   style: TextStyle(color: Color(0xffFF6600)),
-                                ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                side: BorderSide(
-                                  color: Color(0xffFF6600),
                                 ),
                               ),
                             ),
                             SizedBox(
                               height: 20,
                               width: width * 0.9,
-                              child: Divider(color: Colors.black12),
+                              child: const Divider(color: Colors.black12),
                             ),
                             wraptext(
                                 title: 'شارع 44 - السبتية - القاهرة',
@@ -282,19 +284,19 @@ class _HomeViewState extends State<HomeView> {
                                     title: 'إلغاء الطلب',
                                     titleColor: Colors.black,
                                     ButtonColor: Colors.white70),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 elevatedButton(
                                     title: 'إنهاء الطلب',
                                     titleColor: Colors.white,
-                                    ButtonColor: Color(0xffFF6600)),
+                                    ButtonColor: const Color(0xffFF6600)),
                               ],
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -302,14 +304,18 @@ class _HomeViewState extends State<HomeView> {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black12.withOpacity(0.1),
-                                offset: Offset(1, 3),
+                                offset: const Offset(1, 3),
                                 spreadRadius: 3,
                                 blurRadius: 2,
                                 //blurStyle: BlurStyle.normal
                               )
                             ]),
                         child: const ListTile(
-                          leading: Icon(Icons.library_books,size: 40,color: Colors.blue,),
+                          leading: Icon(
+                            Icons.library_books,
+                            size: 40,
+                            color: Colors.blue,
+                          ),
                           title: Text(
                             " 45 طلب   ",
                             style: TextStyle(
@@ -322,12 +328,14 @@ class _HomeViewState extends State<HomeView> {
                             'عدد الطلبات ',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                             // fontSize: 13
-                            ),
+                                // fontSize: 13
+                                ),
                           ),
                         ),
                       ),
-                      SizedBox(height: 15,),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -335,14 +343,18 @@ class _HomeViewState extends State<HomeView> {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black12.withOpacity(0.1),
-                                offset: Offset(1, 3),
+                                offset: const Offset(1, 3),
                                 spreadRadius: 3,
                                 blurRadius: 2,
                                 //blurStyle: BlurStyle.normal
                               )
                             ]),
                         child: const ListTile(
-                          leading: Icon(Icons.attach_money,size: 40,color: Color(0xffFF6600),),
+                          leading: Icon(
+                            Icons.attach_money,
+                            size: 40,
+                            color: Color(0xffFF6600),
+                          ),
                           title: Text(
                             " 1.200 ج.م   ",
                             style: TextStyle(
@@ -355,8 +367,8 @@ class _HomeViewState extends State<HomeView> {
                             'المستحقات المطلوبة ',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                              // fontSize: 13
-                            ),
+                                // fontSize: 13
+                                ),
                           ),
                         ),
                       ),
@@ -379,6 +391,11 @@ class _HomeViewState extends State<HomeView> {
       flex: 1,
       child: ElevatedButton(
         onPressed: () {},
+        style: ElevatedButton.styleFrom(primary: ButtonColor
+            // side: BorderSide(
+            //   color: Colors.black
+            // )
+            ),
         child: SizedBox(
           height: 50,
           child: Center(
@@ -388,11 +405,6 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
         ),
-        style: ElevatedButton.styleFrom(primary: ButtonColor
-            // side: BorderSide(
-            //   color: Colors.black
-            // )
-            ),
       ),
     );
   }
@@ -405,7 +417,7 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Text(title),
           Icon(icon),
-          SizedBox(
+          const SizedBox(
             height: 8,
           )
         ],

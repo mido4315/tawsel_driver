@@ -52,6 +52,7 @@ class OrderDetails extends StatelessWidget {
           const SizedBox(
             height: 18,
           ),
+          const CancellationReason(),
           const SizedBox(
             height: 12,
           ),
