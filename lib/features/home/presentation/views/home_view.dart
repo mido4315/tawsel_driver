@@ -191,7 +191,7 @@ class _HomeViewState extends State<HomeView> {
                         height: 8,
                       ),
                       Container(
-                        height: height * 0.3,
+                        height: height * 0.35,
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -204,7 +204,8 @@ class _HomeViewState extends State<HomeView> {
                                 blurRadius: 2,
                                 //blurStyle: BlurStyle.normal
                               )
-                            ]),
+                            ],
+                        ),
                         child: Column(
                           children: [
                             ListTile(
@@ -229,13 +230,14 @@ class _HomeViewState extends State<HomeView> {
                                 children: const [
                                   Text(
                                     "شارع10 - باب الشعرية - القاهرة",
+                                    style: TextStyle(fontSize: 12),
                                     textAlign: TextAlign.right,
                                   ),
                                   Icon(Icons.location_on),
                                 ],
                               ),
                               trailing: CircleAvatar(
-                                radius: 22,
+                                radius: 20,
                                 backgroundColor: Colors.white,
                                 child: Image.asset(
                                     "assets/image/HomeView/fristorder.png"),
