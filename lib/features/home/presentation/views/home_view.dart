@@ -214,7 +214,7 @@ class _HomeViewState extends State<HomeView> {
                                 child: Text(
                                   'كاش ',
                                   style: TextStyle(
-                                      fontSize: 16, color: Color(0xffFF6600)),
+                                      fontSize: 15, color: Color(0xffFF6600)),
                                 ),
                               ),
                               title: const Text(
