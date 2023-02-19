@@ -83,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           const Padding(
                             padding: EdgeInsets.only(left: 310),
                             child: Text(
-                              'الأسم',
+                              'الأسم بالكامل',
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 14,
