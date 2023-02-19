@@ -306,16 +306,9 @@ class _HomeViewState extends State<HomeView> {
                                 //blurStyle: BlurStyle.normal
                               )
                             ]),
-                        child: ListTile(
-                          leading: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'كاش ',
-                              style: TextStyle(
-                                  fontSize: 16, color: Color(0xffFF6600)),
-                            ),
-                          ),
-                          title: const Text(
+                        child: const ListTile(
+                          leading: Icon(Icons.library_books,size: 40,color: Colors.blue,),
+                          title: Text(
                             " 45 طلب   ",
                             style: TextStyle(
                               fontSize: 15,
@@ -328,6 +321,39 @@ class _HomeViewState extends State<HomeView> {
                             textAlign: TextAlign.right,
                             style: TextStyle(
                              // fontSize: 13
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 15,),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12.withOpacity(0.1),
+                                offset: Offset(1, 3),
+                                spreadRadius: 3,
+                                blurRadius: 2,
+                                //blurStyle: BlurStyle.normal
+                              )
+                            ]),
+                        child: const ListTile(
+                          leading: Icon(Icons.attach_money,size: 40,color: Color(0xffFF6600),),
+                          title: Text(
+                            " 1.200 ج.م   ",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Color(0xffFF6600),
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                          subtitle: Text(
+                            'المستحقات المطلوبة ',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              // fontSize: 13
                             ),
                           ),
                         ),
