@@ -1,10 +1,9 @@
 import 'package:go_router/go_router.dart';
-
 import '../../features/Profile/Presentation/Views/change_current_password_screen.dart';
 import '../../features/SignLog/presentation/views/SignIn.dart';
-import '../../features/SplashScreen/SplashScreen.dart';
 import '../../features/home/presentation/views/bottom_navigation_bar_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/home/presentation/views/orders_history_view.dart';
 import '../../features/order details/Presentation/Views/order_details.dart';
 import '../../features/rest password/presentation/views/homescreen.dart';
 import '../../features/rest password/presentation/views/newpassword.dart';
@@ -20,12 +19,11 @@ abstract class AppRouter {
   static const kNewPasswordPage = '/NewPasswordPage';
   static const kChangeCurrentPasswordPage = '/ChangeCurrentPasswordPage';
 
-
   static final router = GoRouter(
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const HomeView(),
+        builder: (context, state) => const OrdersHistoryView(),
       ),
       GoRoute(
         path: kSignInPage,
