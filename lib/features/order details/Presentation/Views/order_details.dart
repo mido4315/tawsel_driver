@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/cancellation_reason.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/card%20details/first%20card.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/card%20details/second%20card.dart';
 import 'widgets/call_customer_button.dart';
 import 'widgets/customer_details.dart';
 import 'widgets/order_details_list.dart';
@@ -45,8 +47,8 @@ class OrderDetails extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: const [
-
+        children:  [
+          containercard(),
           SizedBox(
             height: 18,
           ),

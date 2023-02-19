@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'button card.dart';
 
 class containersecondcard extends StatelessWidget {
-  containersecondcard({super.key, required, });
+
 
 @override
 Widget build(BuildContext context) {
