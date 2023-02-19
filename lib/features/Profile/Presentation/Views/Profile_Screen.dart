@@ -19,7 +19,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     TextEditingController names = TextEditingController()
-      ..text = 'كرسبي & كرانشي';
+      ..text = 'محمد شادي';
     TextEditingController PhoneNumber = TextEditingController()
       ..text = '0102222145441';
     TextEditingController email = TextEditingController()
@@ -66,7 +66,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 80.0,
                     ),
                     const Text(
-                      'مطعم كريسبي&كرانشي',
+                      'محمد شادي',
                       style: TextStyle(
                         fontFamily: 'Cairo',
                         fontSize: 16,
@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Column(
                         children: <Widget>[
                           const Padding(
-                            padding: EdgeInsets.only(left: 310),
+                            padding: EdgeInsets.only(left: 280),
                             child: Text(
                               'الأسم بالكامل',
                               style: TextStyle(
@@ -97,7 +97,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           CustomField(
                               hint: 'الأسم', prefix: '', Controller: names),
                           const Padding(
-                            padding: EdgeInsets.only(left: 290),
+                            padding: EdgeInsets.only(left: 290,),
                             child: Text(
                               'رقم الهاتف',
                               style: TextStyle(
@@ -114,24 +114,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               hint: 'رقم الهاتف',
                               prefix: '',
                               Controller: PhoneNumber),
-                          const Padding(
-                            padding: EdgeInsets.only(left: 270),
-                            child: Text(
-                              'البريد الألكتروني',
-                              style: TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: 14,
-                                color: Color(0xff090909),
-                                fontWeight: FontWeight.w600,
-                              ),
-                              textAlign: TextAlign.right,
-                              softWrap: false,
-                            ),
-                          ),
-                          CustomField(
-                              hint: 'البريد الألكتروني',
-                              prefix: '',
-                              Controller: email),
                           const Padding(
                             padding: EdgeInsets.only(left: 310),
                             child: Text(
@@ -182,30 +164,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 5),
+                              padding: const EdgeInsets.only(top: 10),
                               child: SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * 0.06,
                                 width: MediaQuery.of(context).size.width * 0.9,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.deepOrange,
+                                    backgroundColor: Color(0xffEBEBEB),
                                   ),
                                   onPressed: () {
                                     GoRouter.of(context).push(
                                       AppRouter.kChangeCurrentPasswordPage,
                                     );
                                   },
-                                  child: const Text(
-                                    'تغيير كلمة السر',
-                                    style: TextStyle(
-                                      fontFamily: 'Cairo',
-                                      fontSize: 14,
-                                      color: Color(0xffffffff),
-                                      fontWeight: FontWeight.w600,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:[
+                                      const Text(
+                                      'تغيير الرقم السري',
+                                      style: TextStyle(
+                                        fontFamily: 'Cairo',
+                                        fontSize: 14,
+                                        color: Color(0xff707070),
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                      textAlign: TextAlign.right,
+                                      softWrap: false,
                                     ),
-                                    textAlign: TextAlign.right,
-                                    softWrap: false,
+                                      Icon(Icons.lock_outline_sharp,color: Color(0xff707070),),
+                                  ],
                                   ),
                                 ),
                               ),
@@ -223,7 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: <Widget>[
                     ClipOval(
                         child: Image.asset(
-                      'images/Profile Image/NoPath - Copy (4).png',
+                      'images/Profile Image/NoPath - Copy.png',
                       width: 150,
                       height: 150,
                       fit: BoxFit.cover,
