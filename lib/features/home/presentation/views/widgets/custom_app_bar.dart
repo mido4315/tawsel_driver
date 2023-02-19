@@ -14,10 +14,10 @@ class CustomAppBarForHomeScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
         ),
         onPressed: () {},
-        icon: SvgPicture.asset("images/notifications icon2.svg"),
+        icon: SvgPicture.asset("images/notifications icon2.svg",height: 500,width: 100,),
       ),
       title: const Text(
-        "برجر كينج",
+        " محمد شادي ",
         textAlign: TextAlign.right,
       ),
       subtitle: Row(
