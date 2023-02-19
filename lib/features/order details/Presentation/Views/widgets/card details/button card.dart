@@ -22,9 +22,6 @@ class ButtonCard extends StatelessWidget {
               isDismissible: true,
               elevation: 4,
               enableDrag: true,
-              shape: RoundedRectangleBorder(
-                  borderRadius:
-                  BorderRadius.vertical(top: Radius.circular(20))),
               context: context,
               builder: (ctx) => SingleChildScrollView(child: containersheet(text: 'سبب الغاء',)));
         }, child: Text("$text",style: textStyle
