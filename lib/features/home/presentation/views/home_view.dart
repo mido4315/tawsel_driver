@@ -199,7 +199,7 @@ class _HomeViewState extends State<HomeView> {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black12.withOpacity(0.1),
-                                offset: Offset(1, 3),
+                                offset: Offset(1,3),
                                 spreadRadius: 3,
                                 blurRadius: 2,
                                 //blurStyle: BlurStyle.normal
