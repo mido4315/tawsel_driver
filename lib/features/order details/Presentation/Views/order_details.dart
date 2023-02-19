@@ -48,16 +48,15 @@ class OrderDetails extends StatelessWidget {
       ),
       body: ListView(
         children:  [
-          containercard(),
-          SizedBox(
+          containersecondcard(),
+          const SizedBox(
             height: 18,
           ),
-          CancellationReason(),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
-          OrderDetailsList(),
-          Padding(
+          const OrderDetailsList(),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             child: Text(
               "بيانات العميل",
@@ -68,27 +67,27 @@ class OrderDetails extends StatelessWidget {
               ),
             ),
           ),
-          CustomerData(
+          const CustomerData(
             data: 'اسم العميل',
             value: 'إبراهيم خالد احمد',
           ),
-          CustomerData(
+          const CustomerData(
             data: 'عنوان العميل',
             value: 'شارع 44 - السبتية - القاهره',
           ),
-          CustomerData(
+          const CustomerData(
             data: 'طريقة الدفع',
             value: 'تم الدفع بالفيزا',
           ),
-          CustomerData(
+          const CustomerData(
             data: 'رقم العميل',
             value: '01452202515',
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
-          CallCustomerButton(),
-          SizedBox(
+          const CallCustomerButton(),
+          const SizedBox(
             height: 30,
           ),
         ],

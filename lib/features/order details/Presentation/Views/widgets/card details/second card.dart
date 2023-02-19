@@ -16,7 +16,7 @@ Widget build(BuildContext context) {
       child: Card(
         shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color:Colors.white )
+            borderSide: const BorderSide(color:Colors.white )
         ),
         elevation: 9 ,
         child: Column(
@@ -26,7 +26,7 @@ Widget build(BuildContext context) {
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text('كاش',style: TextStyle(
+                  const Text('كاش',style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Colors.deepOrange
@@ -35,12 +35,12 @@ Widget build(BuildContext context) {
                     children: [
                       Column(
                         children: [
-                          Text('كريسبي&كرانشي',style: TextStyle(
+                          const Text('كريسبي&كرانشي',style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w500
                           ),),
                           Row(
-                            children: [
+                            children: const [
                               Text('شارع 44- السبتيه-القاهره',style: TextStyle(
 
                                   color: Colors.grey
@@ -51,14 +51,14 @@ Widget build(BuildContext context) {
                         ],
                       ),
                       Container(
-                        child: CircleAvatar(
-                          child:Image.asset('images/Profile – 2.png',fit: BoxFit.contain,),
-                          backgroundColor: Color(0xFFffffff),
-                          radius: 28.0,
-                        ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
 
+                        ),
+                        child: CircleAvatar(
+                          child:Image.asset('images/Profile – 2.png',fit: BoxFit.contain,),
+                          backgroundColor: const Color(0xFFffffff),
+                          radius: 28.0,
                         ),
                       ),
                     ],
@@ -66,14 +66,14 @@ Widget build(BuildContext context) {
                 ],
               ),
             ),
-            Divider(thickness: 1,indent: 17,endIndent: 17,),
+            const Divider(thickness: 1,indent: 17,endIndent: 17,),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 18),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.max,
-                children: [
+                children: const [
                   Text('شارع 44- السبتيه-القاهره',style: TextStyle(
                       fontWeight: FontWeight.w500
                   ),),
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.max,
-                children: [
+                children: const [
                   Text('11:00ص , 20/10/2021 ',textDirection:TextDirection.rtl,style: TextStyle(
                       color: Colors.grey
                   ),),
@@ -97,13 +97,13 @@ Widget build(BuildContext context) {
                 ],
               ),
             ),
-            SizedBox(height: 12,),
+            const SizedBox(height: 12,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               mainAxisSize: MainAxisSize.max,
               children: [
-                ButtonCard(text: 'الغاء الطلب', color: Colors.white70, textStyle: TextStyle(color: Colors.black),),
-                ButtonCard(text: 'انهاء الطلب', color: Colors.deepOrange, textStyle:TextStyle(color: Colors.white),)
+                ButtonCard(text: 'الغاء الطلب', color: Colors.white70, textStyle: const TextStyle(color: Colors.black),),
+                ButtonCard(text: 'انهاء الطلب', color: Colors.deepOrange, textStyle:const TextStyle(color: Colors.white),)
               ],
             )
           ],
