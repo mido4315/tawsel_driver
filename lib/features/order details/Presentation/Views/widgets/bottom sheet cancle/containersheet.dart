@@ -21,7 +21,7 @@ Color color=Color(0xFFffffff);
               border: Border.all(color: Colors.grey, width: 1),
               borderRadius: BorderRadius.circular(5)),
           width: 400,
-          height: 55,
+          height: 200,
           child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               child: Row(
