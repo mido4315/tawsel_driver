@@ -43,6 +43,7 @@ dependencies:
   animated_toggle_switch:
   flutter_switch:
   go_router: ^6.0.8
+  dotted_line:
 dev_dependencies:
   flutter_test:
     sdk: flutter
