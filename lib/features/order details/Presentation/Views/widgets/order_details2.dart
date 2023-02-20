@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/CancleAvater.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/call_customer_button.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/cancellation_reason.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/card%20details/first%20card.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/card%20details/second%20card.dart';
-import 'widgets/call_customer_button.dart';
-import 'widgets/customer_details.dart';
-import 'widgets/order_details_list.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/order_details_list.dart';
+import 'customer_details.dart';
 
-class OrderDetails extends StatelessWidget {
-  const OrderDetails({Key? key}) : super(key: key);
+class OrderDetails2 extends StatelessWidget {
+  const OrderDetails2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +49,13 @@ class OrderDetails extends StatelessWidget {
       ),
       body: ListView(
         children:  [
-          containersecondcard(
+          containercard(
           ),
+          CancleAvater(),
+
           const SizedBox(
             height: 18,
           ),
-          const CancellationReason(),
           const SizedBox(
             height: 12,
           ),

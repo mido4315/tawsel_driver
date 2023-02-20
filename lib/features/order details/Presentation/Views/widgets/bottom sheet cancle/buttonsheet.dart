@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/order_details2.dart';
+
+import '../../order_details.dart';
 
 
 class Buttonsheet extends StatelessWidget {
@@ -16,7 +19,7 @@ class Buttonsheet extends StatelessWidget {
           primary: Color(0xFFFF6600),
         ),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>OrderDetails2()));
         },
         child: Text(
           "${text}",
