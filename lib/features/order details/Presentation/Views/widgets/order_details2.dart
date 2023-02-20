@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/CancleAvater.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/call_customer_button.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/cancellation_reason.dart';
 import 'package:tawsel_driver/features/order%20details/Presentation/Views/widgets/card%20details/first%20card.dart';
@@ -51,7 +50,10 @@ class OrderDetails2 extends StatelessWidget {
         children:  [
           containercard(
           ),
-          CancleAvater(),
+          const SizedBox(
+            height: 18,
+          ),
+          CancellationReason(),
 
           const SizedBox(
             height: 18,
