@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:tawsel_driver/features/SplashScreen/SplashScreen.dart';
 import 'package:tawsel_driver/features/wallet/presentation/views/wallet_view.dart';
 import '../../features/Profile/Presentation/Views/change_current_password_screen.dart';
 import '../../features/SignLog/presentation/views/SignIn.dart';
@@ -24,7 +25,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const OrdersHistoryView(),
+        builder: (context, state) => const SplashView(),
       ),
       GoRoute(
         path: kSignInPage,

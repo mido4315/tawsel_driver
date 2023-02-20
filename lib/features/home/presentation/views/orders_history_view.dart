@@ -42,7 +42,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
                     page: '',
                     leading_choise: true,
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   TabBar(
                     controller: tabController,
                     onTap: (value){
@@ -62,11 +62,12 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
                     //dividerColor: Colors.yellowAccent,
                     indicatorColor: Color(0xffF1F4F3),
                   ),
+                  SizedBox(height: 10,)
                 ],
               ),
             ),
             Container(
-              height: PageSize.height(context)*0.8,
+              height: PageSize.height(context)*0.73,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
                 borderRadius: BorderRadius.circular(10),

@@ -24,7 +24,7 @@ class CurrentOrderCard extends StatelessWidget {
           Custom_ListTitle(
             mainTitle: 'كريسبي و كرانشي',
             subTitle: 'شارع 10 - باب الشعرية- القاهرة ',
-            imageUrl: 'assets/image/driverimage.png',
+            imageUrl: 'assets/image/fristorder.png',
             leading_choise: false,
             leading_text: 'كاش',
             leading_color: Color(0xffFF6600),

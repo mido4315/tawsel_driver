@@ -41,7 +41,7 @@ class Custom_ListTitle extends StatelessWidget {
         radius: 25,
         child: Image(
           height: 60,
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.fill,
           image: AssetImage(
             imageUrl,
           ),
