@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
                       ),
                       Container(
                         child: CircleAvatar(
-                          child:Image.asset('images/Profile – 2.png',fit: BoxFit.contain,),
+                          child:Image.asset( 'images/chec.png',fit: BoxFit.contain,),
                           backgroundColor: Color(0xFFffffff),
                           radius: 28.0,
                         ),
