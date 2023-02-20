@@ -24,7 +24,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const WalletView(),
+        builder: (context, state) => const OrdersHistoryView(),
       ),
       GoRoute(
         path: kSignInPage,
