@@ -31,13 +31,13 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
         body: Column(
           children: [
             Container(
-              height: PageSize.height(context)*0.17,
+              height: PageSize.height(context)*0.19,
               color: Color(0xffF1F4F3),
               child: Column(
                 children: [
                   Custom_ListTitle(
                     mainTitle: 'محمد شادي',
-                    subTitle: 'شارع الدراسات موقف محل الدمنه',
+                    subTitle: 'شارع 10 - باب الشعرية- القاهرة',
                     imageUrl: 'assets/image/driverimage.png',
                     page: '',
                     leading_choise: true,
@@ -67,7 +67,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
               ),
             ),
             Container(
-              height: PageSize.height(context)*0.73,
+              height: PageSize.height(context)*0.70,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
                 borderRadius: BorderRadius.circular(10),
