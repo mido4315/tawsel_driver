@@ -37,7 +37,7 @@ class CustomAppBarForHomeScreen extends StatelessWidget {
       ),
       trailing: CircleAvatar(
         backgroundColor: Colors.white,
-        child: Image.asset("images/restaurantName.png"),
+        child: Image.asset("images/Profile Image/NoPath - Copy.png"),
       ),
     );
   }

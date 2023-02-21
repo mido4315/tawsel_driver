@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tawsel_driver/features/home/presentation/views/widgets/Custom_ListTile.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import 'Container_BoxShadow.dart';
 
 class NewOrderCard extends StatelessWidget {
@@ -36,6 +38,7 @@ class NewOrderCard extends StatelessWidget {
                   duration: Duration(seconds: 1),
                 ),
               );
+              GoRouter.of(context).push(AppRouter.kOrderDetailsPage);
             },
             style: ElevatedButton.styleFrom(
               primary: Colors.white,
