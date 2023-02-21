@@ -24,13 +24,18 @@ class _HomeViewState extends State<HomeView> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: const Color(0xffF1F4F3),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        toolbarHeight: height*0.1,
+        flexibleSpace: const SafeArea(child: CustomAppBarForHomeScreen()),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             // color: Colors.purpleAccent,
             child: Column(
               children: [
-                const CustomAppBarForHomeScreen(),
                 const SizedBox(
                   height: 15,
                 ),
