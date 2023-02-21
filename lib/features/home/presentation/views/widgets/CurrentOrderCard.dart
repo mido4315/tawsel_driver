@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:tawsel_driver/core/utils/app_router.dart';
 import 'package:tawsel_driver/core/utils/constants.dart';
 import 'package:tawsel_driver/features/home/presentation/views/widgets/Custom_ListTile.dart';
 
@@ -8,16 +10,13 @@ class CurrentOrderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(12),
-      padding: EdgeInsets.only(top: 10,bottom: 10,right: 8,left: 8),
+      padding: EdgeInsets.only(top: 10, bottom: 10, right: 8, left: 8),
       height: 300,
-      width:200 ,
+      width: 200,
       decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            ContainerBoxShadow().boxShadow()
-          ]
-      ),
+          boxShadow: [ContainerBoxShadow().boxShadow()]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -37,6 +36,8 @@ class CurrentOrderCard extends StatelessWidget {
                   duration: Duration(seconds: 1),
                 ),
               );
+
+              GoRouter.of(context).push(AppRouter.kOrderDetailsPage);
             },
             style: ElevatedButton.styleFrom(
               primary: Colors.white,
@@ -59,13 +60,12 @@ class CurrentOrderCard extends StatelessWidget {
           wraptext(
             title: 'شارع 44 - السبتية - القاهرة',
             icon: Icons.location_on_rounded,
-            iconColor: Color(0xffFF6600),),
+            iconColor: Color(0xffFF6600),
+          ),
           wraptext(
               title: '20/10/2021 ، 11:00ص ',
               icon: Icons.access_time,
-
-              iconColor: Colors.black38
-          ),
+              iconColor: Colors.black38),
           Row(
             children: [
               elevatedButton(
@@ -85,19 +85,20 @@ class CurrentOrderCard extends StatelessWidget {
       ),
     );
   }
+
   Widget elevatedButton(
       {required String title,
-        required Color titleColor,
-        required Color ButtonColor}) {
+      required Color titleColor,
+      required Color ButtonColor}) {
     return Expanded(
       flex: 1,
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(primary: ButtonColor
-          // side: BorderSide(
-          //   color: Colors.black
-          // )
-        ),
+            // side: BorderSide(
+            //   color: Colors.black
+            // )
+            ),
         child: SizedBox(
           height: 50,
           child: Center(
@@ -110,14 +111,21 @@ class CurrentOrderCard extends StatelessWidget {
       ),
     );
   }
-  Widget wraptext({required String title, required IconData icon,required Color iconColor}) {
+
+  Widget wraptext(
+      {required String title,
+      required IconData icon,
+      required Color iconColor}) {
     return Align(
       alignment: Alignment.centerRight,
       child: Wrap(
         direction: Axis.horizontal,
         children: [
           Text(title),
-          Icon(icon,color: iconColor,),
+          Icon(
+            icon,
+            color: iconColor,
+          ),
           const SizedBox(
             height: 8,
           )

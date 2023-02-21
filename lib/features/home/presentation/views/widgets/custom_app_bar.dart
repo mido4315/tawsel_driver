@@ -19,7 +19,11 @@ class CustomAppBarForHomeScreen extends StatelessWidget {
         onPressed: () {
           GoRouter.of(context).push(AppRouter.kNotificationPage);
         },
-        icon: SvgPicture.asset("images/notifications icon2.svg",height: 500,width: 100,),
+        icon: SvgPicture.asset(
+          "images/notifications icon2.svg",
+          height: 500,
+          width: 100,
+        ),
       ),
       title: const Text(
         " محمد شادي ",
@@ -36,8 +40,9 @@ class CustomAppBarForHomeScreen extends StatelessWidget {
         ],
       ),
       trailing: CircleAvatar(
+        radius: 25,
         backgroundColor: Colors.white,
-        child: Image.asset("images/restaurantName.png"),
+        child: Image.asset("images/Profile Image/NoPath - Copy.png"),
       ),
     );
   }

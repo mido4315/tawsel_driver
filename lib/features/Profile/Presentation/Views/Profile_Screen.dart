@@ -6,8 +6,6 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/utils/app_router.dart';
 import 'widgets/custom_field.dart';
 
-
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -18,8 +16,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController names = TextEditingController()
-      ..text = 'محمد شادي';
+    TextEditingController names = TextEditingController()..text = 'محمد شادي';
     TextEditingController PhoneNumber = TextEditingController()
       ..text = '0102222145441';
     TextEditingController email = TextEditingController()
@@ -41,7 +38,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kNotificationPage);
+            },
             icon: SvgPicture.asset("images/Profile Image/Group 11387.svg"),
           ),
         ),
@@ -53,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                 margin: const EdgeInsets.only(top: 80.0),
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.85,
+                height: MediaQuery.of(context).size.height * 0.75,
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -97,7 +96,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           CustomField(
                               hint: 'الأسم', prefix: '', Controller: names),
                           const Padding(
-                            padding: EdgeInsets.only(left: 290,),
+                            padding: EdgeInsets.only(
+                              left: 290,
+                            ),
                             child: Text(
                               'رقم الهاتف',
                               style: TextStyle(
@@ -180,20 +181,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   },
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children:[
-                                      const Text(
-                                      'تغيير الرقم السري',
-                                      style: TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontSize: 14,
-                                        color: Color(0xff707070),
-                                        fontWeight: FontWeight.w600,
+                                    children: const [
+                                      Text(
+                                        'تغيير الرقم السري',
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 14,
+                                          color: Color(0xff707070),
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        textAlign: TextAlign.right,
+                                        softWrap: false,
                                       ),
-                                      textAlign: TextAlign.right,
-                                      softWrap: false,
-                                    ),
-                                      Icon(Icons.lock_outline_sharp,color: Color(0xff707070),),
-                                  ],
+                                      Icon(
+                                        Icons.lock_outline_sharp,
+                                        color: Color(0xff707070),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),

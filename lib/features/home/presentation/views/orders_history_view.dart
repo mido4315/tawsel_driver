@@ -19,7 +19,7 @@ class OrdersHistoryView extends StatefulWidget {
 }
 
 TabController? tabController ;
-int TabBarPage=0;
+int TabBarPage=2;
 bool color =false;
 class _OrdersHistoryViewState extends State<OrdersHistoryView>
     with TickerProviderStateMixin {
@@ -35,13 +35,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
               color: const Color(0xffF1F4F3),
               child: Column(
                 children: [
-                  Custom_ListTitle(
-                    mainTitle: 'محمد شادي',
-                    subTitle: 'شارع10-باب الشعرية-القاهرة',
-                    imageUrl: 'assets/image/driverimage.png',
-                    page: '',
-                    leading_choise: true,
-                  ),
+                  const CustomAppBarForHomeScreen(),
                   const SizedBox(height: 10,),
                   TabBar(
                     controller: tabController,

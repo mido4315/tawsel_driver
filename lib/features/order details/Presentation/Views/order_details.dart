@@ -20,9 +20,10 @@ class OrderDetails extends StatelessWidget {
           style: IconButton.styleFrom(
             padding: EdgeInsets.zero,
           ),
-          onPressed: () {
-          },
-          icon: SvgPicture.asset("images/notifications icon2.svg"),
+          onPressed: () {},
+          icon: SvgPicture.asset(
+            "images/notifications icon2.svg",
+          ),
         ),
         title: const Align(
           alignment: Alignment.centerRight,
@@ -47,13 +48,12 @@ class OrderDetails extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children:  [
-          containersecondcard(
-          ),
+        children: [
+          containersecondcard(),
           const SizedBox(
             height: 18,
           ),
-          const CancellationReason(),
+          // const CancellationReason(),
           const SizedBox(
             height: 12,
           ),
