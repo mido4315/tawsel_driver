@@ -32,7 +32,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
           children: [
             Container(
               height: PageSize.height(context)*0.19,
-              color: Color(0xffF1F4F3),
+              color: const Color(0xffF1F4F3),
               child: Column(
                 children: [
                   Custom_ListTitle(
@@ -42,7 +42,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
                     page: '',
                     leading_choise: true,
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   TabBar(
                     controller: tabController,
                     onTap: (value){
@@ -53,46 +53,35 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
                     },
                     tabs: [
                       //
-                      TabBar_Button(ButtonTitle: 'الطلبات الحالية', color: TabBarPage==0?Color(0xffFF6600):Color(0xffFFFFFFF)),
-                      TabBar_Button(ButtonTitle: 'طلبات جديدة',color: TabBarPage==1?Color(0xffFF6600):Color(0xffFFFFFFF)),
-                      TabBar_Button(ButtonTitle: 'كل الطلبات',color: TabBarPage==2?Color(0xffFF6600):Color(0xffFFFFFFF)),
+                      TabBar_Button(ButtonTitle: 'الطلبات الحالية', color: TabBarPage==0?const Color(0xffFF6600):const Color(0xffFFFFFFF)),
+                      TabBar_Button(ButtonTitle: 'طلبات جديدة',color: TabBarPage==1?const Color(0xffFF6600):const Color(0xffFFFFFFF)),
+                      TabBar_Button(ButtonTitle: 'كل الطلبات',color: TabBarPage==2?const Color(0xffFF6600):const Color(0xffFFFFFFF)),
                     ],
                     //unselectedLabelColor: Colors.white70,
                     labelColor: Colors.black,
                     //dividerColor: Colors.yellowAccent,
-                    indicatorColor: Color(0xffF1F4F3),
+                    indicatorColor: const Color(0xffF1F4F3),
                   ),
-                  SizedBox(height: 10,)
+                  const SizedBox(height: 10,)
                 ],
               ),
             ),
-            Container(
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.circular(10),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xffFFFFFF),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TabBarView(
+                  controller: tabController,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    CurrentOrder(),
+                    NewOrder(),
+                    AllOrder(),
+                  ],
+                ),
               ),
-              child: TabBarView(
-                controller: tabController,
-                physics: NeverScrollableScrollPhysics(),
-                children: [
-                  CurrentOrder(),
-                  NewOrder(),
-                  AllOrder(),
-                ],
-              ),
-              //child: CurrentOrder(),
-              //child: NewOrder(),
-              // child: SingleChildScrollView(
-              //   child: Column(
-              //     children: [
-              //       NewOrderCard(),
-              //       NewOrderCard(),
-              //       NewOrderCard(),
-              //       NewOrderCard(),
-              //     ],
-              //   ),
-              // ),
             ),
           ],
         ),

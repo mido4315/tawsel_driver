@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utils/app_router.dart';
 
 class CustomAppBarForHomeScreen extends StatelessWidget {
   const CustomAppBarForHomeScreen({
@@ -13,7 +16,9 @@ class CustomAppBarForHomeScreen extends StatelessWidget {
         style: IconButton.styleFrom(
           padding: EdgeInsets.zero,
         ),
-        onPressed: () {},
+        onPressed: () {
+          GoRouter.of(context).push(AppRouter.kNotificationPage);
+        },
         icon: SvgPicture.asset("images/notifications icon2.svg",height: 500,width: 100,),
       ),
       title: const Text(

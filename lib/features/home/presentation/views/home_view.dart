@@ -2,6 +2,8 @@ import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/utils/app_router.dart';
 import 'widgets/current_order_list_view.dart';
 import 'widgets/custom_app_bar.dart';
 import 'widgets/order_now_card.dart';
@@ -253,6 +255,7 @@ class _HomeViewState extends State<HomeView> {
                                     duration: Duration(seconds: 1),
                                   ),
                                 );
+                                GoRouter.of(context).push(AppRouter.kOrderDetailsPage);
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.white,
@@ -262,7 +265,7 @@ class _HomeViewState extends State<HomeView> {
                               ),
                               child: const Center(
                                 child: Text(
-                                  'عرض التفاصيل الطلب ',
+                                  'عرض تفاصيل الطلب ',
                                   style: TextStyle(color: Color(0xffFF6600)),
                                 ),
                               ),

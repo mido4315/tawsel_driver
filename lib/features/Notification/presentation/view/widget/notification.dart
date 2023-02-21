@@ -33,8 +33,8 @@ class notification extends StatelessWidget {
           itemBuilder:
           (context,int index){
     return  ListTile(
-    title: Text('تم رفض الطلب من قبل العميل',textAlign: TextAlign.end),
-    subtitle: Text('03.10.2020',textAlign: TextAlign.end),
+    title: const Text('تم رفض الطلب من قبل العميل',textAlign: TextAlign.end),
+    subtitle: const Text('03.10.2020',textAlign: TextAlign.end),
       trailing: CircleAvatar(
         radius: 25,
         backgroundColor: Colors.red,
