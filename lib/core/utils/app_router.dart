@@ -27,7 +27,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const ChangePassword(),
+        builder: (context, state) => const SplashView(),
         /*SplashView()*/
       ),
       GoRoute(
