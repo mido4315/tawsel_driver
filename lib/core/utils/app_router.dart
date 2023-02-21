@@ -25,7 +25,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const OrderDetails(),
+        builder: (context, state) => const OrdersHistoryView(),
         /*SplashView()*/
       ),
       GoRoute(

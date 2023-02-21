@@ -37,7 +37,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
                 children: [
                   Custom_ListTitle(
                     mainTitle: 'محمد شادي',
-                    subTitle: 'شارع 10 - باب الشعرية- القاهرة',
+                    subTitle: 'شارع10-باب الشعرية-القاهرة',
                     imageUrl: 'assets/image/driverimage.png',
                     page: '',
                     leading_choise: true,
@@ -67,7 +67,7 @@ class _OrdersHistoryViewState extends State<OrdersHistoryView>
               ),
             ),
             Container(
-              height: PageSize.height(context)*0.70,
+              height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
                 borderRadius: BorderRadius.circular(10),
