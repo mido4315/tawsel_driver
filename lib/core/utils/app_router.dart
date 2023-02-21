@@ -27,7 +27,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const BottomNavigationBarView(),
+        builder: (context, state) => const ChangePassword(),
         /*SplashView()*/
       ),
       GoRoute(
@@ -52,7 +52,7 @@ abstract class AppRouter {
       // ),
       GoRoute(
         path: kChangeCurrentPasswordPage,
-        builder: (context, state) => const ChangeCurrentPasswordScreen(),
+        builder: (context, state) => const ChangePassword(),
       ),
       GoRoute(
         path: kNotificationPage,
